@@ -25,4 +25,13 @@
     align-items: center;
     margin-left: 3px;
   }
- 
+  .card-icon{
+      justify-content: flex-end !important;
+  }
+ .icons{
+    font-size: 20px;
+    padding: 20px;
+ }
+ .comment > input{
+     border: none !important;
+ }
