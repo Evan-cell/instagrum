@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from.forms import CreateUserForm
 # Create your views here.
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
@@ -9,10 +9,10 @@ from django.contrib.auth.forms import UserCreationForm
 def home(request):
    return render(request, 'base/home.html')
 def registerPage(request):
-    form = UserCreationForm()
+    form = CreateUserForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
     context = {'form': form}
