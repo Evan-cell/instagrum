@@ -8,8 +8,10 @@ from django.contrib.auth import authenticate, login, logout
 
 
 # Create your views here.
-def home(request):
+def developer(request):
    return render(request, 'base/home.html')
+def insta(request):
+   return render(request, 'base/insta.html')   
 def registerPage(request):
     form = CreateUserForm()
 
@@ -25,7 +27,7 @@ def registerPage(request):
     return render(request, 'accounts/register.html', context)
 def loginPage(request):
 	if request.user.is_authenticated:
-		return redirect('home')
+		return redirect('insta')
 	else:
 		if request.method == 'POST':
 			username = request.POST.get('username')
