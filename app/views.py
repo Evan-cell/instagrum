@@ -6,6 +6,24 @@ from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 
+# news imports
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse, HttpResponseRedirect
+from django.template import loader
+
+from .models import Stream, Post, Tag, Likes, PostFileContent
+from .forms import NewPostForm
+from .models import Story, StoryStream
+
+from .models import Comment
+from .forms import CommentForm
+
+
+from django.contrib.auth.decorators import login_required
+
+from django.urls import reverse
+from .models import Profile
+
 
 # Create your views here.
 def developer(request):
