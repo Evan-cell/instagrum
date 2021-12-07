@@ -4,17 +4,24 @@
     margin-top: 10px;
     margin-left: 10px;
 }
+.header-centre > input{
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(236, 229, 229);
+    outline: none;
+}
 .header-right{
     margin-right: 10px;
 }
 #icon{
     margin-left: 10px;
     font-size: 15px;
+    cursor: pointer;
 }
-.posts{
+/* .posts{
     
     flex: 0.7;
-}
+} */
 .avatar {
     vertical-align: middle;
     width: 50px;
@@ -25,13 +32,30 @@
     align-items: center;
     margin-left: 3px;
   }
-  .card-icon{
-      justify-content: flex-end !important;
+  .avatar > i{
+    display: flex;
+    color:rgb(0, 81, 255);
+    cursor: pointer;
+    justify-content: flex-end;
   }
  .icons{
     font-size: 20px;
-    padding: 20px;
+    cursor: pointer;
+ }
+ #icon:hover{
+     color: rgb(255, 0, 0);
  }
  .comment > input{
      border: none !important;
+     outline: none;
+ }
+ .comment > h6{
+    display: flex;
+    color:rgb(0, 81, 255);
+    cursor: pointer;
+    justify-content: flex-end;
+ }
+ .comment{
+    display: flex;
+    align-items: center
  }
