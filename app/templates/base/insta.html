@@ -39,11 +39,12 @@
                        </div>
                 </div>
             </div>
+            {%for post_item in post_items%}
             <div class="col-md-9">
                <div class="card card-body">
                    <div class="avatar">
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
-                    <p class="p-2">jayden</p>
+                    <p class="p-2">{{post_item.user.username}}</p>
                     <i class="bi bi-three-dots"></i>
                    </div>
                    <hr>
@@ -55,7 +56,10 @@
                     <i id="icon" style=" display: flex; justify-content: flex-end;" class="bi bi-bookmark"></i>
                    </div>
                    <h6>1,626 likes</h6>
-                   <p style="font-weight: 600;">The best stock of images around</p>
+                   <p style="font-weight: 600;">{{post_item.caption}}</p>
+                   {%for tag in post_item.tags.all%}
+                   <p style="font-weight: 600;">#{{tag}}</p>
+                   {%endfor%}
                    <hr>
                    <div class="comment">
                     <i style="font-size: 20px;" class="bi bi-emoji-smile"></i>
@@ -64,6 +68,7 @@
                    </div>
                </div> 
             </div>
+            {%endfor%}
             <div class="col-md-3">
                 <div class="card card-body">
                     <div class="avatar mt-4">
